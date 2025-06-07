@@ -1,0 +1,138 @@
+
+/* Reset and base */
+html, body {
+  margin: 0; padding: 0;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #fff; /* changed to white */
+  font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: none;
+}
+
+#chat-window {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #e5ddd5;
+  width: 90%;
+  height: 100%;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.left {
+  align-self: flex-start;
+  background-color: #ececec;
+  color: #222;
+}
+
+.left strong {
+  font-weight: 900; /* extra bold */
+}
+
+.right {
+  align-self: flex-end;
+  background-color: #91bbe6;
+  color: white;
+}
+
+.right strong {
+  font-weight: 900; /* extra bold */
+}
+
+.button-container {
+  padding: 0.75rem;
+  background: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #91bbe6;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #91bbe6;
+}
+
+#toggle-theme {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 12px auto 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle-theme svg {
+  width: 24px;
+  height: 24px;
+  fill: black; /* Black & white icons */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #222;
+}
+
+body.dark-mode #chat-window {
+  background: #333;
+}
+
+body.dark-mode .left {
+  background-color: #555;
+  color: #eee;
+}
+
+body.dark-mode .right {
+  background-color: #0a9cae;
+  color: white;
+}
+
+body.dark-mode button {
+  background-color: #0a9cae;
+}
+
+body.dark-mode button:hover {
+  background-color: #067b86;
+}
+
+body.dark-mode #toggle-theme svg {
+  fill: white;
+}
